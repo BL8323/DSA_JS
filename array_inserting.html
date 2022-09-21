@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Array Inserting</title>
+    <script>
+      //   let data = [9, 54, 56, 77, 22, 8, 98, 90];
+      //   let newel = 70;
+      //   let position = 2;
+      //   for (let i = data.length - 1; i >= 0; i--) {
+      //     if (i >= position) {
+      //       data[i + 1] = data[i];
+      //       if (i === position) {
+      //         data[i] = newel;
+      //       }
+      //     }
+      //   }
+      //   console.log(data);
+      function insertEl() {
+        let data = [9, 54, 56, 77, 22, 8, 98, 90];
+        let newel = document.getElementById("newel").value;
+        newel = parseInt(newel);
+        let position = document.getElementById("position").value;
+
+        for (let i = data.length - 1; i >= 0; i--) {
+          if (i >= position) {
+            data[i + 1] = data[i];
+            if (i == position) {
+              data[i] = newel;
+            }
+          }
+        }
+        console.log(data);
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" id="position" placeholder="enter position" />
+    <input type="text" id="newel" placeholder="enter new element" />
+    <button onclick="insertEl()">Insert</button>
+  </body>
+</html>
